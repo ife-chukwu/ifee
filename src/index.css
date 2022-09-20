@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,200;1,400;1,600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;1,400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: poppins;
+  background: black;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background-color: rgb(34, 33, 33);
+  color: whitesmoke;
+  transition: 0.4s ease-in;
+}
+.main:hover {
+  box-shadow: 1px 0px 5px #b1adad;
+}
+.logo {
+  font-family: Pacifico;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  padding-right: 30%;
+  padding-left: 40px;
+  font-size: 2.1rem;
+  letter-spacing: 0.9px;
+  transition: 0.4s ease-in;
+  text-shadow: 1px 1px 1px black;
+}
+.logo:hover {
+  color: rgb(225, 168, 61);
+}
+
+.span-1 {
+  color: #959090;
+  padding: 4px;
+}
+
+.main-2 {
+  list-style: none;
+  padding: 15px;
+  font-size: 17px;
+}
+.link {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: 0.3s ease;
+}
+.link:hover {
+  color: #b1adad;
+  border-bottom: 1px solid rgb(210, 202, 202);
+}
+.sign-up {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 20px;
+  list-style: none;
+}
+.sign-up button {
+  padding: 10px 38px;
+  border: solid 1px #b1adad;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #676464;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 600;
+  text-shadow: 1px 0 1px black;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.sign-up button:hover {
+  background-color: rgb(232, 232, 232);
+  color: #676464;
+}
+.sign-up .link-2 {
+  text-decoration: none;
+  border: solid 1px #b1adad;
+  border-left: 0;
+  padding: 8px 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px black;
+  transition: 0.3s ease;
+}
+.sign-up .link-2:hover {
+  background-color: #b1adad;
+  border: solid 1px #676464;
+}
+.sample {
+  position: relative;
+  opacity: 0.4;
+  width: 100%;
+  height: 557px;
+  background-size: cover;
+  object-fit: cover;
+}
+.sample--text {
+  position: absolute;
+  color: #f2ebeb;
+  top: 200px;
+  left: 50px;
+  font-size: 5rem;
+  line-height: 80px;
+  font-weight: 400;
+  font-family: poppins;
+  letter-spacing: -4px;
+  text-shadow: 4px 2px 2px black;
+}
+.sample-text-2 {
+  color: rgb(245, 169, 28);
+  font-family: oswald;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  padding: 3px 0;
+  margin-top: -7px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background-color: rgb(28, 26, 26);
+}
+
+.footer-p {
+  font-size: 10px;
+}
+.footer-h {
+  font-size: 15px;
+  padding-top: 15px;
+}
+.footer-list {
+  display: flex;
+  font-size: 12px;
+  list-style: none;
+  line-height: 10px;
+}
+.footer-icon {
+  display: flex;
+  font-size: 25px;
+  color: #b1adad;
+}
+.footer-icon i {
+  padding: 7px 5px;
+  font-size: 15px;
+}
+
+.footer-link {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #b1adad;
+}
+.footer-link:hover {
+  border-bottom: 1px solid #b1adad;
+}
+.food-sec {
+  padding: 30px 10px;
+}
+.food-title {
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.2s ease-in;
+}
+.food-title:hover {
+  color: #b1adad;
+}
+
+.food-sec p {
+  color: whitesmoke;
+}
+.signup {
+  color: whitesmoke;
+}
+
+section {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  object-fit: cover;
+  animation: mybody 10s infinite;
+}
+.food-img {
+  border: 2px groove rgb(82, 80, 80);
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  transition: 0.1s ease-in;
+}
+.food-link {
+  text-decoration: none;
+}
+.food-img:hover {
+  opacity: 0.5;
+  border: 1px solid whitesmoke;
+}
+.btn-start {
+  display: flex;
+  padding: 17px 150px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: cabin;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #1e1e1e;
+}
+
+.btn-start:hover {
+  background-color: rgb(224, 157, 31);
+  border: none;
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px black;
+}
+/* form sec */
+
+.form-text {
+  display: flex;
+  color: whitesmoke;
+  padding-left: 100px;
+  margin-top: -30px;
+  padding-bottom: 10px;
+  font-family: pacifico;
+  font-weight: 300;
+}
+
+.backdrop {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(14, 14, 13, 0.4);
+  z-index: 1;
+  cursor: pointer;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.pass {
+  margin-left: 30%;
+  color: red;
+  text-align: center;
+  margin-bottom: 100px;
+  width: 40%;
+}
+.form {
+  z-index: 10;
+  position: fixed;
+  left: 300;
+  top: 200;
+  margin-top: 30px;
+  width: 50rem;
+  height: 430px;
+  background-color: rgb(9, 9, 9);
+  padding-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgb(0, 0, 0);
+  transition: 1s ease-in;
+}
+.form:hover {
+  background-color: #121212;
+  box-shadow: 0px 0px 2px rgb(230, 222, 222);
+}
+input[type="text"] {
+  justify-content: center;
+  width: 70%;
+  padding: 15px 20px;
+  margin: 8px 100px;
+  display: inline-block;
+  border: 1px hidden #ccc;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 1px 1px rgb(242, 236, 236);
+}
+.btnn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12%;
+  margin-top: 25%;
+}
+.btn-small {
+  display: flex;
+  padding: 12px 100px;
+  border-radius: 10px;
+  border: 1px solid #e3d9d9;
+  background-color: #f6f6f6;
+  outline: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.btn-small:hover {
+  background-color: orange;
+  border: 1px solid orange;
+  outline: none;
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px black;
+}
+
+
+
+.icon{
+  color: white;
+  font-size: 30px;
+}
+@keyframes mybody {
+  from {
+    background-color: #111010;
+  }
+  to {
+    background-color: #212020;
+  }
+}
