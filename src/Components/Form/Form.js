@@ -1,61 +1,62 @@
-import { useState, useRef } from "react";
-import Backdrop from "./Backdrop";
+import { useState } from "react";
+
 function Form(props) {
-  const nameInputRef = useRef();
-  const [enteredUserName, setEnteredUserName] = useState("");
-  const [validateUser, setValidateUser] = useState("true");
-  const [enteredUserPassword, setEnteredUserPassword] = useState('')
+  const [userName, setUserName] = useState("");
+  const [validateUser, setValidateUser] = useState("false");
+  const [userPassword, setUserPassword] = useState("");
 
   const enteredUserNameHandler = (event) => {
-    setEnteredUserName(event.target.value);
+    setUserName(event.target.value);
   };
-  const enteredPassword = (event) =>{
-    setEnteredUserPassword(event.target.value)
-  }
-  const eventHandler = (event) => {
-    event.preventDefault();
+  const enteredUserPasswordHandler = (event) => {
+    setUserPassword(event.target.value);
+  };
 
-    if (enteredUserName.trim() === "") {
-      setValidateUser(false);
-      return;
+  const submitHandler = (event) => {
+    event.preventDefault();
+    if (userName.trim() === "") {
+      return setValidateUser(false);
     }
     setValidateUser(true);
 
-    console.log(enteredUserName);
-    const setEnterValue = nameInputRef.current.value;
-    console.log(setEnterValue);
-    setEnteredUserName("");
+    if (userPassword.trim() === "") {
+      return setValidateUser(false);
+    }
+
+    setValidateUser(true);
+
+    console.log(userName);
+    console.log(userPassword);
   };
   return (
     <div className="form-container">
       <div className="form">
-        <form onSubmit={eventHandler}>
+        <form>
           <h2 className="form-text">FoodAcademy</h2>
           <input
-            ref={nameInputRef}
             type="text"
-            id="name"
-            placeholder="Enter UserName"
+            name="firstNameEmail"
+            placeholder="Enter UserName/Email"
             onChange={enteredUserNameHandler}
-            value={enteredUserName}
-          />
-          <input
-            ref={nameInputRef}
-            type="password"
-            id="password"
-            placeholder="Enter Password"
-            onChange={enteredUserPassword}
-            value={enteredUserName}
           />
           {!validateUser && <p className="pass">Username Cannot be blank</p>}
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            onChange={enteredUserPasswordHandler}
+          />
+          {!validateUser && <p className="pass">password Cannot be blank</p>}
+
           <div className="btnn">
-          <button className="btn-small">Submit</button>
-          <button className="btn-small" onClick={props.onClick}>
-          Cancel
-        </button>
-        </div>
+            <button className="btn-small" onClick={submitHandler}>
+              Confirm
+            </button>
+            <button className="btn-small" onClick={props.onClick}>
+              Cancel
+            </button>
+          </div>
         </form>
-        
       </div>
     </div>
   );

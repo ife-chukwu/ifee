@@ -192,9 +192,6 @@ footer {
 .food-sec p {
   color: whitesmoke;
 }
-.signup {
-  color: whitesmoke;
-}
 
 section {
   display: flex;
@@ -258,18 +255,19 @@ section {
   width: 100%;
   background-color: rgba(14, 14, 13, 0.4);
   z-index: 1;
-  cursor: pointer;
 }
 .form-container {
   display: flex;
   justify-content: center;
 }
 .pass {
-  margin-left: 30%;
+  margin-left: 27%;
   color: red;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   width: 40%;
+  background-color: rgb(250, 167, 13);
 }
 .form {
   z-index: 10;
@@ -293,7 +291,19 @@ input[type="text"] {
   justify-content: center;
   width: 70%;
   padding: 15px 20px;
-  margin: 8px 100px;
+  margin: 15px 100px;
+  display: inline-block;
+  border: 1px hidden #ccc;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 1px 1px rgb(242, 236, 236);
+}
+input[type="password"] {
+  justify-content: center;
+  width: 70%;
+  padding: 15px 20px;
+  margin: 20px 100px;
   display: inline-block;
   border: 1px hidden #ccc;
   outline: none;
@@ -304,13 +314,13 @@ input[type="text"] {
 .btnn {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   gap: 12%;
-  margin-top: 25%;
+  margin-top: 6%;
+  margin-right: 35px;
 }
 .btn-small {
   display: flex;
-  padding: 12px 100px;
+  padding: 12px 90px;
   border-radius: 10px;
   border: 1px solid #e3d9d9;
   background-color: #f6f6f6;
@@ -327,11 +337,23 @@ input[type="text"] {
   text-shadow: 1px 1px 1px black;
 }
 
-
-
-.icon{
+.sign-up-1 {
   color: white;
-  font-size: 30px;
+}
+
+.icon {
+  margin-left: 93%;
+  margin-top: 20px;
+  z-index: 20;
+  color: white;
+  font-size: 40px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.icon:hover{
+  transform: scale(1.1);
+  color: orange;
 }
 @keyframes mybody {
   from {

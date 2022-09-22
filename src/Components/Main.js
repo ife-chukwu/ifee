@@ -1,20 +1,17 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Form from "./Form/Form";
-import Backdrop from "./Form/Backdrop";
-
+import Backdrop from './Form/Backdrop'
 function Main(props) {
   const [FormIsOpen, setFormIsOpen] = useState(false);
-  
-  
+
   function myFun() {
     setFormIsOpen(true);
   }
   function closeFormHandler() {
     setFormIsOpen(false);
   }
-
-  function closeBackDrop(){
+  function closeBackdropandler(){
     setFormIsOpen(false)
   }
 
@@ -56,7 +53,7 @@ function Main(props) {
         </ul>
       </ul>
       {FormIsOpen && <Form onClick={closeFormHandler} />}
-      {FormIsOpen && <Backdrop onCancle={closeBackDrop} />}
+      {FormIsOpen && <Backdrop  onCancel={closeBackdropandler} />}
     </div>
   );
 }
