@@ -1,62 +1,56 @@
 import { useState } from "react";
+import FormValidate from "./FormValidate";
 
 function Form(props) {
-  const [userName, setUserName] = useState("");
-  const [validateUser, setValidateUser] = useState("false");
-  const [userPassword, setUserPassword] = useState("");
+  const [value, setValue] = useState({
+    password: "",
+    email: "",
+  });
 
-  const enteredUserNameHandler = (event) => {
-    setUserName(event.target.value);
-  };
-  const enteredUserPasswordHandler = (event) => {
-    setUserPassword(event.target.value);
-  };
+  const [errors, setErrors] = useState({});
+  const handleChange = (e) =>
+    setValue({
+      ...value,
+      [e.target.name]: e.target.value,
+    });
 
   const submitHandler = (event) => {
     event.preventDefault();
-    if (userName.trim() === "") {
-      return setValidateUser(false);
-    }
-    setValidateUser(true);
-
-    if (userPassword.trim() === "") {
-      return setValidateUser(false);
-    }
-
-    setValidateUser(true);
-
-    console.log(userName);
-    console.log(userPassword);
+    setErrors(FormValidate);
+    console.log(value);
   };
+
   return (
     <div className="form-container">
       <div className="form">
         <form>
           <h2 className="form-text">FoodAcademy</h2>
           <input
-            type="text"
-            name="firstNameEmail"
-            placeholder="Enter UserName/Email"
-            onChange={enteredUserNameHandler}
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            value={value.email}
+            onChange={handleChange}
           />
-          {!validateUser && <p className="pass">Username Cannot be blank</p>}
+          {errors.email && <p className="pass">{errors.email}</p>}
+
           <input
             type="password"
+            placeholder="Password"
             name="password"
-            placeholder="Enter Password"
-            onChange={enteredUserPasswordHandler}
+            value={value.password}
+            onChange={handleChange}
           />
-          {!validateUser && <p className="pass">password Cannot be blank</p>}
-
-          <div className="btnn">
-            <button className="btn-small" onClick={submitHandler}>
-              Confirm
-            </button>
-            <button className="btn-small" onClick={props.onClick}>
-              Cancel
-            </button>
-          </div>
+          {errors.password && <p className="pass">{errors.password}</p>}
         </form>
+        <div className="btnn">
+          <button className="btn-small" onClick={submitHandler}>
+            Submit
+          </button>
+          <button className="btn-small" onClick={props.onClick}>
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ function Index() {
   });
 
   return (
-    <div>
+    <div className="hero--section">
       <div>
         <img src="/Images/pizza2.png" alt="" className="sample" />
         <h1 className="sample--text">

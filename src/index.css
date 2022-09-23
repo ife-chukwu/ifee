@@ -13,7 +13,9 @@
 }
 body {
   font-family: poppins;
-  background: black;
+}
+.hero--section {
+  background-color: #111010;
 }
 
 .main {
@@ -287,7 +289,7 @@ section {
   background-color: #121212;
   box-shadow: 0px 0px 2px rgb(230, 222, 222);
 }
-input[type="text"] {
+input[type="email"] {
   justify-content: center;
   width: 70%;
   padding: 15px 20px;
@@ -337,10 +339,6 @@ input[type="password"] {
   text-shadow: 1px 1px 1px black;
 }
 
-.sign-up-1 {
-  color: white;
-}
-
 .icon {
   margin-left: 93%;
   margin-top: 20px;
@@ -351,9 +349,30 @@ input[type="password"] {
   cursor: pointer;
   transition: 0.4s ease;
 }
-.icon:hover{
+.icon:hover {
   transform: scale(1.1);
   color: orange;
+}
+/* main form styling */
+.sign-up-1 {
+  background-color: #111010;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.sign-up-1 input[type="text"] {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 10px 0;
+  padding: 14px 150px;
+}
+
+.sign-up-form {
+  background-color: #676464;
+  padding: 100px 140px;
 }
 @keyframes mybody {
   from {

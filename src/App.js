@@ -4,7 +4,7 @@ import SubMain from "./Components/SubMain";
 import About from "./Components/About";
 import Order from "./Components/Order";
 import { Routes, Route } from "react-router-dom";
-import Signup from "./Components/SIgnup";
+import Signup from "./Components/Form/SIgnup";
 
 function App() {
   return (
