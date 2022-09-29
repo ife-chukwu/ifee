@@ -23,9 +23,12 @@ function Index() {
           <br /> there's enjoyment
         </h1>
       </div>{" "}
+      <h1 className="FoodSample">Our food samples</h1>
       <section>
         {FoodSec}
-        <button className="btn-start">Buy Now</button>
+        <Link to="subMain" className="food-link">
+          <button className="btn-start">Buy Now</button>
+        </Link>
       </section>
       <footer>
         <h2 className="footer-h">Food Academy</h2>

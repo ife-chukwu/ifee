@@ -1,23 +1,37 @@
 import { useState } from "react";
-import FormValidate from "./FormValidate";
 
 function Form(props) {
-  const [value, setValue] = useState({
-    password: "",
-    email: "",
-  });
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [ValidateEmail, setValidateEmail] = useState(false);
+  const [enteredPassword, setEnteredPassword] = useState("");
 
-  const [errors, setErrors] = useState({});
-  const handleChange = (e) =>
-    setValue({
-      ...value,
-      [e.target.name]: e.target.value,
-    });
+  const enteredEmailHandler = (event) => {
+    setEnteredEmail(event.target.value);
+  };
+
+  const enteredPasswordHandler = (event) => {
+    setEnteredPassword(event.target.value);
+  };
+
+  const emailValidationHandler = () => {
+    setValidateEmail(false);
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setErrors(FormValidate);
-    console.log(value);
+    if (
+      enteredEmail.trim().length === 0 ||
+      enteredPassword.trim().length === 0
+    ) {
+      return;
+    }
+    const inputValues = {
+      email: enteredEmail,
+      password: enteredPassword,
+    };
+    console.log(inputValues);
+    setEnteredEmail("");
+    setEnteredPassword("");
   };
 
   return (
@@ -29,19 +43,17 @@ function Form(props) {
             type="email"
             placeholder="Email Address"
             name="email"
-            value={value.email}
-            onChange={handleChange}
+            value={enteredEmail}
+            onChange={enteredEmailHandler}
           />
-          {errors.email && <p className="pass">{errors.email}</p>}
 
           <input
             type="password"
             placeholder="Password"
             name="password"
-            value={value.password}
-            onChange={handleChange}
+            onChange={enteredPasswordHandler}
+            value={enteredPassword}
           />
-          {errors.password && <p className="pass">{errors.password}</p>}
         </form>
         <div className="btnn">
           <button className="btn-small" onClick={submitHandler}>

@@ -1,4 +1,4 @@
-export default [
+const myData = [
   {
     id: 1,
     img: "pizza3.png",
@@ -56,5 +56,6 @@ export default [
     rating: 3.5,
   },
 ];
+export default myData
 
 

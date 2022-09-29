@@ -194,6 +194,14 @@ footer {
 .food-sec p {
   color: whitesmoke;
 }
+.FoodSample{
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
 
 section {
   display: flex;
@@ -289,7 +297,7 @@ section {
   background-color: #121212;
   box-shadow: 0px 0px 2px rgb(230, 222, 222);
 }
-input[type="email"] {
+.form-container input[type="email"] {
   justify-content: center;
   width: 70%;
   padding: 15px 20px;
@@ -301,7 +309,7 @@ input[type="email"] {
   border-radius: 5px;
   box-shadow: 1px 1px rgb(242, 236, 236);
 }
-input[type="password"] {
+.form-container input[type="password"] {
   justify-content: center;
   width: 70%;
   padding: 15px 20px;
@@ -355,7 +363,7 @@ input[type="password"] {
 }
 /* main form styling */
 .sign-up-1 {
-  background-color: #111010;
+  background-color: #151313;
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -363,16 +371,36 @@ input[type="password"] {
   height: 100vh;
 }
 
-.sign-up-1 input[type="text"] {
-  display: grid;
-  grid-template-columns: auto;
-  margin: 10px 0;
-  padding: 14px 150px;
+.sign-up-1 input[type="text"],
+[type="password"],
+[type="date"],
+[type="email"] {
+  display: flex;
+  margin: 20px 0;
+  width: 600px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  color: #111010;
+  outline: none;
+  font-size: 16px;
 }
 
 .sign-up-form {
-  background-color: #676464;
-  padding: 100px 140px;
+  background-color: #111010;
+  box-shadow: 1px 0 3px rgb(168, 163, 163), 0 0 5px rgb(140, 126, 81);
+  padding: 50px 80px;
+  border-radius: 10px;
+  transition: 0.5s ease-in;
+  margin-top: 40px;
+}
+.sign-up-form:hover {
+  box-shadow: none;
+}
+
+.age{
+  color: whitesmoke
 }
 @keyframes mybody {
   from {
